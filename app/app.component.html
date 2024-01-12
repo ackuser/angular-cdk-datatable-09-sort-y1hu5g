@@ -1,0 +1,33 @@
+<p><button (click)="update()">update</button></p>
+
+<my-table [displayedColumns]="displayedColumns" [data]="sortedData" sort (sortChange)="sortData($event)">
+
+	<!-- [name] columnを定義 -->
+	<ng-container columnDef="name">
+		<ng-container *headerCellDef>
+			<span style="border: 1px solid cyan;" sortHeader>Name</span>
+		</ng-container>
+		<ng-container *cellDef="let row;">
+			<span style="border: 1px solid cyan;">{{row.name}}</span>
+		</ng-container>
+	</ng-container>
+	<!-- [age] columnを定義 -->
+	<ng-container columnDef="age">
+		<ng-container *headerCellDef>
+			<span style="border: 1px solid green;" sortHeader>Age</span>
+		</ng-container>
+		<ng-container *cellDef="let row;">
+			<span style="border: 1px solid green;">{{row.age}}</span>
+		</ng-container>
+	</ng-container>
+	<!-- [id] columnを定義 -->
+	<ng-container columnDef="id">
+		<ng-container *headerCellDef>
+			<span style="border: 1px solid blue;" sortHeader>Id</span>
+		</ng-container>
+		<ng-container *cellDef="let row;">
+			<span style="border: 1px solid blue;">{{row.id}}</span>
+		</ng-container>
+	</ng-container>
+
+</my-table>

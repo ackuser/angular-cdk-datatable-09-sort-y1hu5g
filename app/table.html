@@ -1,0 +1,13 @@
+<!-- header rowを定義 -->
+<ng-container *headerRowDef>
+	<div style="border: 1px solid magenta; background-color: rgba(255,0,255,.2)">[header]
+		<ng-container cellOutlet></ng-container>
+	</div>
+</ng-container>
+
+<!-- rowを定義 -->
+<ng-container *rowDef>
+	<div style="border: 1px solid red; background-color: rgba(255,0,0,.2)">[row]
+		<ng-container cellOutlet></ng-container>
+	</div>
+</ng-container>
